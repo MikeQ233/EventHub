@@ -112,7 +112,7 @@ function ModPopUp(event, domCallBack, serverCallBack) {
         setButton.addEventListener('click', mapSet.bind(this));
 
         function getGoogleMapForMod(googleMap, inputBox) {
-            googleMap.src = "https://www.google.com/maps/embed/v1/view?zoom=17&center=43.6628917,-79.39565640000001&key=AIzaSyAoTRQ4XHxOlEQVJO-3yMI_15G0lBZWH0U";
+            googleMap.src = "https://www.google.com/maps/embed/v1/view?zoom=17&center=43.6628917,-79.39565640000001&key=key";
             const eventLoc = new google.maps.LatLng(43.6628917, -79.39565640000001); // uoft
             const bounds = new google.maps.LatLngBounds(eventLoc);
 
@@ -127,7 +127,7 @@ function ModPopUp(event, domCallBack, serverCallBack) {
             function onPlaceChanged() {
                 const place = autoComplete.getPlace();
                 if (place.geometry) {
-                    googleMap.src = `https://www.google.com/maps/embed/v1/place?zoom=17&q=${place.formatted_address}&key=AIzaSyAoTRQ4XHxOlEQVJO-3yMI_15G0lBZWH0U`;
+                    googleMap.src = `https://www.google.com/maps/embed/v1/place?zoom=17&q=${place.formatted_address}&key=key`;
                     address = place.formatted_address;
                     searchText = place.name;
                 }
